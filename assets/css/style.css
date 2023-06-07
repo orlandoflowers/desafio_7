@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.big-container {
+  width: 100%;
+  /* max-width: 1366px; */
+  height: 100vh;
+  background-color: antiquewhite;
+  display: grid;
+  grid-template-columns: 200px auto;
+  grid-template-rows: 80px auto 80px;
+  grid-template-areas:
+    "header header header header"
+    "sidebar main main main"
+    "footer footer footer footer";
+}
+
+.container {
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item1 {
+  background-color: lightcyan;
+  grid-area: header;
+  color: darkblue;
+}
+
+.item1 p {
+  font-size: 2rem;
+}
+
+.item2 {
+  background-color: white;
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  padding: 1rem;
+}
+
+.item2 .categories-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item2 h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.item2 p {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 2;
+  margin: 0;
+}
+
+.item2 span {
+  font-weight: 300;
+  color: lightgrey;
+}
+
+.item3 {
+  background-color: lightgrey;
+  grid-area: main;
+  display: grid;
+  grid-auto-flow: row;
+  align-items: start;
+  justify-content: start;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  /* grid-auto-rows: 230px; */
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+
+.card {
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-bottom: 1rem;
+  border: 1px solid rgb(220, 220, 220);
+}
+
+.item3 img {
+  width: 9rem;
+  margin: 0 auto;
+}
+
+.item3 h2 {
+  font-weight: 500;
+  font-size: 1.2rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.card p {
+  color: green;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.card button {
+  box-sizing: border-box;
+  border: 0;
+  padding: 0.5rem 1rem;
+  background-color: palegreen;
+  width: 100%;
+  font-size: 0.75rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.card button:hover {
+  border: 2px solid rgb(7, 197, 7);
+}
+
+.item4 {
+  background-color: rgb(0, 56, 139);
+  grid-area: footer;
+}
+
+.item4 p {
+  color: white;
+}
